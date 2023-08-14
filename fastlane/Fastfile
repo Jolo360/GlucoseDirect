@@ -24,8 +24,8 @@ DEVICE_ID = ENV["DEVICE_ID"]
 ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "120"
 
 platform :ios do
-  desc "Build Loop"
-  lane :build_loop do
+  desc "Build GlucoseDirect"
+  lane :build_glucosedirect do
     setup_ci if ENV['CI']
     
     update_project_team(
@@ -80,7 +80,7 @@ platform :ios do
       path: "#{GITHUB_WORKSPACE}/GlucoseDirect/GlucoseDirect.xcodeproj",
       profile_name: mapping["com.#{TEAMID}.libre-direct"],
       code_sign_identity: "iPhone Distribution",
-      targets: ["Loop"]
+      targets: ["libre-direct"]
     )
 
 
