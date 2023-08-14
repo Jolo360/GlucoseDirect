@@ -87,8 +87,8 @@ platform :ios do
 
     gym(
       export_method: "app-store",
-      scheme: "GlucoseDirect",
-      output_name: "GlucoseDirect.ipa",
+      scheme: "GlucoseDirectApp",
+      output_name: "GlucoseDirectApp.ipa",
       configuration: "Release",
       destination: 'generic/platform=iOS',
       buildlog_path: 'buildlog'
