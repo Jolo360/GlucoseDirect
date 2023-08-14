@@ -133,7 +133,7 @@ platform :ios do
         bundle_id.create_capability(capability)
       }
     end
-
+end  
 
   desc "Provision Certificates"
   lane :certs do
