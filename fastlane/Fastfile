@@ -171,7 +171,7 @@ end
       bundle_id = Spaceship::ConnectAPI::BundleId.find(identifier)
     end
 
-    find_bundle_id("com.#{TEAMID}.loopkit.Loop")
+    find_bundle_id("com.#{TEAMID}.libre-direct")
   end
   
   desc "Nuke Certs"
@@ -192,3 +192,4 @@ end
       git_basic_authorization: Base64.strict_encode64("#{GITHUB_REPOSITORY_OWNER}:#{GH_PAT}")
     )
   end
+end
