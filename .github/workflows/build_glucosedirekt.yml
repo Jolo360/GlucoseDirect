@@ -37,7 +37,7 @@ jobs:
       
       # Build signed Loop IPA file
       - name: Fastlane Build & Archive
-        run: fastlane build_loop
+        run: fastlane build_glucosedirect
         env:
           TEAMID: ${{ secrets.TEAMID }}
           GH_PAT: ${{ secrets.GH_PAT }}
