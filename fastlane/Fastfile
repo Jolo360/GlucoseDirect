@@ -40,7 +40,7 @@ platform :ios do
     )
 
     previous_build_number = latest_testflight_build_number(
-      app_identifier: "com.#{TEAMID}.libre-direct",
+      app_identifier: "com.#{TEAMID}.GlucoseDirectApp",
       api_key: api_key,
     )
 
@@ -56,12 +56,12 @@ platform :ios do
       type: "appstore",
       git_basic_authorization: Base64.strict_encode64("#{GITHUB_REPOSITORY_OWNER}:#{GH_PAT}"),
       app_identifier: [
-        "com.#{TEAMID}.libre-direct"
+        "com.#{TEAMID}.GlucoseDirectApp"
       ]
     )
 
     previous_build_number = latest_testflight_build_number(
-      app_identifier: "com.#{TEAMID}.libre-direct",
+      app_identifier: "com.#{TEAMID}.GlucoseDirectApp",
       api_key: api_key,
     )
 
@@ -78,9 +78,9 @@ platform :ios do
 
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/GlucoseDirect.xcodeproj",
-      profile_name: mapping["com.#{TEAMID}.libre-direct"],
+      profile_name: mapping["com.#{TEAMID}.GlucoseDirectApp"],
       code_sign_identity: "iPhone Distribution",
-      targets: ["libre-direct"]
+      targets: ["GlucoseDirectApp"]
     )
 
 
@@ -111,7 +111,7 @@ platform :ios do
     upload_to_testflight(
       api_key: api_key,
       skip_submission: false,
-      ipa: "GlucoseDirect.ipa",
+      ipa: "GlucoseDirectApp.ipa",
       skip_waiting_for_build_processing: true,
     )
   end
@@ -151,7 +151,7 @@ end
       force: true,
       git_basic_authorization: Base64.strict_encode64("#{GITHUB_REPOSITORY_OWNER}:#{GH_PAT}"),
       app_identifier: [
-        "com.#{TEAMID}.libre-direct"
+        "com.#{TEAMID}.GlucoseDirectApp"
       ]
     )
   end
@@ -171,7 +171,7 @@ end
       bundle_id = Spaceship::ConnectAPI::BundleId.find(identifier)
     end
 
-    find_bundle_id("com.#{TEAMID}.libre-direct")
+    find_bundle_id("com.#{TEAMID}.GlucoseDirectApp")
   end
   
   desc "Nuke Certs"
