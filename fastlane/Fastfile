@@ -51,8 +51,6 @@ platform :ios do
       build_number: current_build_number
     )      
 
-PRODUCT_BUNDLE_IDENTIFIER = com.${DEVELOPMENT_TEAM}.libre-direct
-APP_GROUP_ID = group.com.$(DEVELOPMENT_TEAM).loopkit.LoopGroup
     
     match(
       type: "appstore",
